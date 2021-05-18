@@ -48,7 +48,7 @@ jobs:
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: sftp://frs.sourceforge.net:22/${{ steps.config.outputs.sourceforge_dir }}
+          ftp-server: sftp://frs.sourceforge.net/${{ steps.config.outputs.sourceforge_dir }}
           ftp-username: ${{ secrets.USERNAME }}
           ftp-password: ${{ secrets.PASSWORD }}
           local-dir: 'build/'
